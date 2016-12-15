@@ -11,14 +11,17 @@
     <script src="https://unpkg.com/babel-standalone@6.15.0/babel.min.js"></script>
     <script type="text/babel">
 
-      var Component = React.createClass({
+      var First = React.createClass({
         render: function() {
           return React.DOM.span(null, "I'm so custom");
         }
       });
+
+      var Factory = React.createFactory(First);
       
       ReactDOM.render(
-        React.createElement(Component),
+        // React.createElement(First),
+        Factory(),
         document.getElementById("root")
       );
 
