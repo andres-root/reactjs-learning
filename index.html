@@ -18,6 +18,8 @@
         }
       });
 
+      var Factory = React.createFactory(First);
+
       var Second = React.createClass({
         propTypes: {
           firstName: React.PropTypes.string.isRequired,
@@ -32,8 +34,26 @@
           return React.DOM.span(null, "My name is " + this.props.firstName + " " + this.props.lastName);
         }
       });
+      
+      var TextCounter = React.createClass({
+        propTypes: {
+          text: React.PropTypes.string,
+        },
+        getDefaultProps: function () {
+          return {
+            text: '',
+          };
+        },
+        render: function() {
+          return React.DOM.div(null,
+            React.DOM.textarea({
+              defaultValue: this.props.text,
+            }),
+            React.DOM.h3(null, this.props.text.length)
+          );
+        }
+      });
 
-      var Factory = React.createFactory(First);
       
       ReactDOM.render(
         // React.createElement(First),
