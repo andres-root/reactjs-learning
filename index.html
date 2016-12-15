@@ -59,7 +59,7 @@
             React.DOM.textarea({
               defaultValue: this.props.text,
             }),
-            React.DOM.h3(null, this.props.text.length)
+            React.DOM.h3(null, this.state.text.length)
           );
         }
       });
@@ -72,7 +72,7 @@
         //   firstName: "Andres",
         // }),
         React.createElement(TextCounter, {
-          text: 'This is the way the world ends.',
+          text: '',
         }),
         document.getElementById("root")
       );
