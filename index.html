@@ -12,7 +12,7 @@
     <script type="text/babel">
 
       ReactDOM.render(
-        React.DOM.h1({id: "title"}, "Hello, world!"),
+        React.DOM.h1({id: "title"}, React.DOM.span({id: "bolder"}, "Hello"), ", world!"),
         document.getElementById('root')
       );
 
