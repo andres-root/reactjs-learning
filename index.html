@@ -59,6 +59,7 @@
           return React.DOM.div(null,
             React.DOM.textarea({
               defaultValue: this.props.text,
+              onChange: this._textChange,
             }),
             React.DOM.h3(null, this.state.text.length)
           );
