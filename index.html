@@ -12,9 +12,15 @@
     <script type="text/babel">
 
       ReactDOM.render(
-        React.DOM.h1({id: "title"}, React.DOM.span({id: "bolder"}, "Hello"), ", world!"),
-        document.getElementById('root')
+        React.createElement(Component),
+        document.getElementById("root")
       );
+
+      var Component = React.createClass({
+        render: function() {
+          return React.DOM.span(null, "I'm so custom");
+        }
+      });
 
     </script>
   </body>
