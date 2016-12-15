@@ -58,8 +58,11 @@
       ReactDOM.render(
         // React.createElement(First),
         // Factory(),
-        React.createElement(Second, {
-          firstName: "Andres",
+        // React.createElement(Second, {
+        //   firstName: "Andres",
+        // }),
+        React.createElement(TextCounter, {
+          text: '',
         }),
         document.getElementById("root")
       );
