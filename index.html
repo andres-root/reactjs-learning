@@ -11,16 +11,16 @@
     <script src="https://unpkg.com/babel-standalone@6.15.0/babel.min.js"></script>
     <script type="text/babel">
 
-      ReactDOM.render(
-        React.createElement(Component),
-        document.getElementById("root")
-      );
-
       var Component = React.createClass({
         render: function() {
           return React.DOM.span(null, "I'm so custom");
         }
       });
+      
+      ReactDOM.render(
+        React.createElement(Component),
+        document.getElementById("root")
+      );
 
     </script>
   </body>
