@@ -20,10 +20,16 @@
 
       var Second = React.createClass({
         propTypes: {
-          name: React.PropTypes.string.isRequired,
+          firstName: React.PropTypes.string.isRequired,
+          lastName: React.PropTypes.string,
+        },
+        getDefaultProps: function () {
+          return {
+            lastName: 'n/a',
+          }
         },
         render: function() {
-        return React.DOM.span(null, "My name is " + this.props.name);
+          return React.DOM.span(null, "My name is " + this.props.firstName + this.props.lastName);
         }
       });
 
