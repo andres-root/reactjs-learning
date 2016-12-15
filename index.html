@@ -5,7 +5,7 @@
     <title>Reactive App</title>
   </head>
   <body>
-    <div id="root"></div>
+    <div id="wrapper"></div>
     <script src="https://unpkg.com/react@latest/dist/react.js"></script>
     <script src="https://unpkg.com/react-dom@latest/dist/react-dom.js"></script>
     <!-- script src="https://unpkg.com/babel-standalone@6.15.0/babel.min.js"></script -->
@@ -15,7 +15,7 @@
 
       var First = React.createClass({
         render: function() {
-          return React.DOM.span(null, "I'm so custom");
+          return React.DOM.span(null, 'I\'m so custom');
         }
       });
 
@@ -32,7 +32,7 @@
           }
         },
         render: function() {
-          return React.DOM.span(null, "My name is " + this.props.firstName + " " + this.props.lastName);
+          return React.DOM.span(null, 'My name is ' + this.props.firstName + ' ' + this.props.lastName);
         }
       });
       
@@ -76,7 +76,7 @@
         React.createElement(TextCounter, {
           text: '',
         }),
-        document.getElementById("root")
+        document.getElementById('wrapper')
       );
 
     </script>
